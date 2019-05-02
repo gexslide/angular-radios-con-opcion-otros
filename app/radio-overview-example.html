@@ -1,0 +1,22 @@
+<!-- <div class="lista" > -->
+  <br>
+<mat-radio-group #radioGroup class="lista" name="radios" >
+  <!-- <div class=""> -->
+    <mat-radio-button *ngFor="let season of seasons" (change)="seleccionado($event)" [value]="season">
+    {{season}}
+    </mat-radio-button>
+  <!-- </div> -->
+  <!-- <div > -->
+      <mat-radio-button #otro (change)="seleccionado($event)" value="otro">Otro:
+        <mat-form-field>
+        <input matInput type="text" [(ngModel)]="inputOtro" (change)="marcar()">
+        </mat-form-field>
+        </mat-radio-button>
+  <!-- </div> -->
+</mat-radio-group>
+<!-- </div> -->
+<button mat-raised-button [disabled]="otroSinTexto" color="primary" (click)="respuesta()">Respuesta</button>
+
+<!-- Copyright 2019 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
